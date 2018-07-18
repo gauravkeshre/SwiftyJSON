@@ -211,7 +211,7 @@ extension String: SubscriptType {}
 
 extension JSON {
     
-    /// If `type` is `.Array`, return json which's object is `array[index]`, otherwise return null json with error.
+    /// If `type` is `.Array`, return json which's object at `array[index]`, otherwise return null json with error.
     private subscript(#index: Int) -> JSON {
         get {
             
@@ -242,7 +242,7 @@ extension JSON {
         }
     }
 
-    /// If `type` is `.Dictionary`, return json which's object is `dictionary[key]` , otherwise return null json with error.
+    /// If `type` is `.Dictionary`, return json which's object from `dictionary[key]` , otherwise return null json with error.
     private subscript(#key: String) -> JSON {
         get {
             var returnJSON = JSON.nullJSON
